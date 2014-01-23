@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JSON Tutorial 1</title>
+<script type="text/javascript">
+	var obj1 = {
+		user : "Chandra",
+		age : 26,
+		country : "USA"
+	};
+	var obj2 = {
+		user : "Chethana",
+		age : 24,
+		country : "Canada"
+	};
+	var obj3 = {
+		user : "Saanvi",
+		age : 5,
+		country : "India"
+	};
+	var obj4 = {
+		u1 : obj1,
+		u2 : obj2,
+		u3 : obj3
+	};
+	document.write(obj1.age);
+	obj1.age = 27;
+	document.write("<hr/>");
+	document.write(obj1.age);
+	document.write("<hr/>");
+	document.write(obj4.u2.country);
+</script>
+</head>
+<body>
+</body>
+</html>
