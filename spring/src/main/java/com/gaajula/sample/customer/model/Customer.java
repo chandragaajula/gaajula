@@ -1,43 +1,49 @@
 package com.gaajula.sample.customer.model;
 
-public class Customer {
-    int custId;
-    String name;
-    int age;
+import java.io.Serializable;
 
-    public Customer(int custId, String name, int age) {
-        this.custId = custId;
-        this.name = name;
-        this.age = age;
-    }
+public class Customer implements Serializable {
+	long custId;
+	String name;
+	int age;
 
-    public int getCustId() {
-        return custId;
-    }
+	public Customer() {
+	}
 
-    public void setCustId(int custId) {
-        this.custId = custId;
-    }
+	public Customer(long custId, String name, int age) {
+		this.custId = custId;
+		this.name = name;
+		this.age = age;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public long getCustId() {
+		return custId;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setCustId(long custId) {
+		this.custId = custId;
+	}
 
-    public int getAge() {
-        return age;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    @Override
-    public String toString() {
-        return "Customer [age=" + age + ", custId=" + custId + ", name=" +
-        name + "]";
-    }
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [age=" + age + ", custId=" + custId + ", name=" + name
+				+ "]";
+	}
+
 }
