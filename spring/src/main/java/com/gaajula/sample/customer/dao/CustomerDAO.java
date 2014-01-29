@@ -28,5 +28,11 @@ public interface CustomerDAO {
 	public String findCustomerNameById(int custId);
 
 	public int findTotalCustomer();
+	
+static final int sfs =3;
+
+public static transient int sdfsd;
+	
+	
 
 }

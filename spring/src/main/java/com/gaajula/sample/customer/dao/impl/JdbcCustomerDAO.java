@@ -35,6 +35,7 @@ public class JdbcCustomerDAO extends JdbcDaoSupport implements CustomerDAO {
 
 	}
 
+	@Deprecated
 	// insert batch example
 	public void insertBatch(final List<Customer> customers) {
 
@@ -43,6 +44,7 @@ public class JdbcCustomerDAO extends JdbcDaoSupport implements CustomerDAO {
 
 		getJdbcTemplate().batchUpdate(sql, new BatchPreparedStatementSetter() {
 
+			@Override			
 			public void setValues(PreparedStatement ps, int i)
 					throws SQLException {
 				Customer customer = customers.get(i);
